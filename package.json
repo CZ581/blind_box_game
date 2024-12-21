@@ -1,0 +1,46 @@
+{
+  "name": "react-wheel-demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^5.22.5",
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "cra-template": "1.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.0.2",
+    "react-scripts": "5.0.1",
+    "spin-wheel-game": "^1.0.3-alpha.3"
+  },
+  "scripts": {
+    "start": "set PORT=3002 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build:babel": "babel src --out-dir dist",  
+    "start:pm2": "pm2 start dist/server.js --watch" 
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3"
+  }
+}

@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.wheel-container {
+  margin: 20px auto;
+  max-width: 320px;
+}
+
+h1 {
+  color: #333;
+}
+
+h2 {
+  color: #4CAF50;
+}
