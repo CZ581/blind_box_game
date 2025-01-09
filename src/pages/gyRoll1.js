@@ -42,7 +42,7 @@ function Roll1() {
   // 后端获取券码
   const fetchCouponCode = async (prize) => {
     try {
-      const response = await fetch(`http://localhost:3000/get-coupon/${prize}`);
+      const response = await fetch(`http://49.233.190.253:3000/get-coupon/${prize}`);
       const data = await response.json();
       if (response.ok) {
         return data.couponCode;
@@ -155,6 +155,7 @@ function Roll1() {
 
       <div style={{ marginTop: '30px' }}>
         <h3>抽奖结果：</h3>
+        <p>要记得保存奖励券码哦~</p>
         <p>许愿角色：{wishedPrize || '未选择角色'}</p>
         {spinResults.length > 0 ? (
           spinResults.map((item, index) => (

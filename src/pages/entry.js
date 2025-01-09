@@ -17,7 +17,7 @@ const Page0 = () => {
   const handleSubmit = async () => {
     try {
       // 向后端验证券码
-      const response = await fetch(`http://localhost:3000/validate-coupon/${couponCode}`);
+      const response = await fetch(`http://49.233.190.253:3000/validate-coupon/${couponCode}`);
       const result = await response.json();
   
       console.log(result); // 调试：打印返回结果
@@ -123,7 +123,7 @@ const Page0 = () => {
             <Input
           value={couponCode}
           onChange={handleInputChange}
-          placeholder="请输入盲盒游戏进入券码"
+          placeholder="请输入盲盒游戏进入券码(游戏已结束，网站体验券码为ChatAILover+1-404任意数字)"
           style={{ 
             // width: '100%'
             flex: 1, 
@@ -142,10 +142,16 @@ const Page0 = () => {
         <div>
         <Card title="游戏规则" style={{flex: 1,}}>
           <div style={{ fontWeight: 'bold' }}>（请确保完全知晓游戏规则后再开始游戏）</div>
-          <p>Rule1</p>
-          <p>Rule2</p>
-          <p>Rule3</p>
+          <p>进入券码使用说明：每张券码只可使用【1次】，输入后会进入对应抽奖界面</p>
+          <p style={{ fontWeight: 'bold' }}>切记进入后【不要刷新网页】，如果刷新网页会再次回到主界面</p>
+	<p>单抽规则：抽中选择的自推概率为40%（如果未选择自推会随机一个角色）</p>
+	<p>三抽规则：三抽中必有一保底为已选择自推（请至少选择一个自推角色）</p>
+          <p>转盘结束后都会显示抽出的【主动版月卡券码】，请妥善保管该券码并在【券码验证页面】进行验证</p>
         </Card>
+        </div>
+        <div style={{padding:'20px 0px'}}>
+        <label>如果你想要直接跳转到验券页面，请： </label>
+        <a href="http://101.42.170.17:5000/">点击这里👈</a> 
         </div>
       </div>
       </Content>
@@ -276,5 +282,3 @@ const Page0 = () => {
 };
 
 export default Page0;
-
-

@@ -16,7 +16,7 @@ const prizes = ['⭐', '🐟', '🍐', '🚗'];
 // 示例：用于获取券码的异步函数
 async function fetchCouponCode(prize) {
   try {
-    const response = await fetch(`http://localhost:3000/get-coupon/${prize}`);
+    const response = await fetch(`http://49.233.190.253:3000/get-coupon/${prize}`);
     const data = await response.json();
     if (data.couponCode) {
       return data.couponCode; // 返回券码
@@ -187,7 +187,7 @@ useEffect(() => {
       <br />
     <Alert
       message="三抽转盘使用指北"
-      description="此转盘可以转三次，点击转盘任意处都可以触发旋转（。＾▽＾）三次后消失。记得要先选择自推再开始哦~（未选择许愿角色则不计数）"
+      description="此转盘可以转三次，点击【转盘任意处】都可以触发旋转（。＾▽＾）三次后消失。记得要先选择自推再开始哦~（未选择许愿角色则不计数）"
       type="warning"
       style={{fontWeight:'bold'}}
       showIcon
@@ -227,6 +227,7 @@ useEffect(() => {
 
       <div style={{ marginTop: '30px' }}>
         <h3>抽奖结果：</h3>
+	<p>要记得保存奖励券码哦~</p>
         <p>许愿角色：{wishedPrize || '未选择角色'}</p> 
         {spinResults.length > 0 ? (
           spinResults.map((item, index) => (
